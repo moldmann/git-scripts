@@ -1,0 +1,39 @@
+; List all the Repositories here for backup by Rsync (called by git_auto_backup.cmd)
+
+; NOTES:
+; base directory for rsync backup is c:\workspace
+; c:\workspace\Scripts is Junction to c:\Scripts created by LinkShellExtension in order to include the Scripts and its git folder in the repo backup
+
+- *.bak~
+- *.tmp
++ /projects/
+
+; Repo within source folder
++ /Scripts/
++ /Scripts/.git/
+; Backup .gitignore and .gitattributes
++ /Scripts/.git*
+- /Scripts/*
+
+; Repo within source folder
++ /projects/SharedTools/
++ /projects/SharedTools/scripts/
++ /projects/SharedTools/scripts/.git/
+; Backup .gitignore and .gitattributes
++ /projects/SharedTools/scripts/.git*
+- /projects/SharedTools/scripts/*
+- /projects/SharedTools/*
+
+; Repo with separate git folder
++ /projects/ICE/
++ /projects/ICE/src/
++ /projects/ICE/ICE.git/
+; Backup .gitignore and .gitattributes
++ /projects/ICE/src/.git*
+- /projects/ICE/src/*
+- /projects/ICE/*
+
+- /projects/*
+- /projects/*/*
+- /projects/
+- /*
