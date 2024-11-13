@@ -17,7 +17,7 @@
 # HINTS:
 # * Override the default diff tool by setting the environment variable %COMPARE_TOOL
 # * Change the default diff tool in the script below
-# * Install the fd file search tool so the script will automatically find the diff tool directory (https://tinyurl.com/y6eos2q4)
+# * Install the fd file search tool so the script will automatically find the diff tool directory (https://github.com/sharkdp/fd)
 
 ###### AUTHOR LIST ###
 #
